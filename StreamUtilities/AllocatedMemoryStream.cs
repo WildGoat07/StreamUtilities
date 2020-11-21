@@ -40,6 +40,7 @@ namespace StreamUtilities
         public AllocatedMemoryStream(ReadOnlyMemory<byte> memory)
         {
             this.roMemory = memory;
+            this.memory = null;
         }
 
         #endregion Public Constructors
