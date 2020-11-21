@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using StreamUtilities;
 
 namespace test
@@ -9,9 +10,6 @@ namespace test
 
         private static void Main(string[] args)
         {
-            var stream = new TemporaryStream(5);
-            stream.Dispose();
-            stream.Dispose();
         }
 
         #endregion Private Methods
