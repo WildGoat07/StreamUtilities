@@ -27,6 +27,12 @@ namespace StreamUtilities
         /// <param name="seed">The seed of the internal random generator.</param>
         public RandomStream(int? seed) => generator = seed.HasValue ? new Random(seed.Value) : new Random();
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="generator">The generator used to give random values.</param>
+        public RandomStream(Random generator) => this.generator = generator;
+
         #endregion Public Constructors
 
         #region Public Properties
@@ -61,7 +67,7 @@ namespace StreamUtilities
         #region Public Methods
 
         /// <summary>
-        /// Closes the stream, deleting all data saved inside.
+        /// Closes the stream.
         /// </summary>
         /// <exception cref="ObjectDisposedException">The stream is closed or disposed.</exception>
         public override void Close()
