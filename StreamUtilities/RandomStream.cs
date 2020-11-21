@@ -25,13 +25,13 @@ namespace StreamUtilities
         /// Constructor.
         /// </summary>
         /// <param name="seed">The seed of the internal random generator.</param>
-        public RandomStream(int? seed) => generator = seed.HasValue ? new Random(seed.Value) : new Random();
+        public RandomStream(int seed) => generator = new Random(seed);
 
         /// <summary>
         /// Constructor.
         /// </summary>
         /// <param name="generator">The generator used to give random values.</param>
-        public RandomStream(Random generator) => this.generator = generator;
+        public RandomStream(Random? generator = null) => this.generator = generator ?? new Random();
 
         #endregion Public Constructors
 
