@@ -31,6 +31,8 @@ namespace StreamUtilities
         {
             this.roMemory = memory;
             this.memory = memory;
+            position = 0;
+            closed = false;
         }
 
         /// <summary>
@@ -41,6 +43,8 @@ namespace StreamUtilities
         {
             this.roMemory = memory;
             this.memory = null;
+            position = 0;
+            closed = false;
         }
 
         #endregion Public Constructors

@@ -14,7 +14,7 @@ namespace StreamUtilities
     {
         #region Private Fields
 
-        private bool closed;
+        private bool closed = false;
         private Random generator;
 
         #endregion Private Fields
